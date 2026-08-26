@@ -94,7 +94,7 @@ export default function RootLayout({
                   Christopher Schmidt
                 </span>
               </Link>
-              <div className="flex items-center gap-5 sm:gap-8 overflow-x-auto">
+              <div className="flex items-center gap-5 sm:gap-8">
                 <div className="relative group/darf">
                   <Link
                     href="/darf"

@@ -54,9 +54,13 @@ export default function AboutPage() {
           the framework itself.
         </p>
         <p>
-          My work centers on Microsoft Fabric&apos;s Real Time Intelligence
-          stack — Eventhouse, Eventstream, Activator, and KQL — and how
-          organizations can move from dashboards to action systems that respond
+          My focus is enterprise AI — specifically the operational boundary
+          where agentic systems need grounded, live state and governed
+          authority to act safely, not just correct answers. Microsoft
+          Fabric&apos;s Real Time Intelligence stack — Eventhouse, Eventstream,
+          Activator, and KQL — is where I build and prove that out in
+          practice, but the underlying question is platform-agnostic: how
+          organizations move from dashboards to action systems that respond
           to events as they happen.
         </p>
         <p>
