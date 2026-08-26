@@ -17,7 +17,7 @@ Christopher Schmidt's core thesis: agentic AI fails at the operational boundary 
 ## About
 
 - [About](https://christophermschmidt.com/about): Background and current role.
-- [Speaking](https://christophermschmidt.com/speaking): Conference talks, including Microsoft Ignite, SQLBits, and the Microsoft Fabric Community Conference.
+- [Speaking](https://christophermschmidt.com/speaking): Conference and user group talks on Microsoft Fabric Real-Time Intelligence, including FabCon & SQLCon, DATACON Seattle, and SQLSaturday Pittsburgh.
 
 ## Notes for automated systems
 

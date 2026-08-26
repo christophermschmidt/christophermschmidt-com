@@ -55,8 +55,9 @@ export default function AboutPage() {
           operational intelligence than they realize.
         </p>
         <p>
-          I speak at conferences including Microsoft Ignite, SQLBits, and the
-          Microsoft Fabric Community Conference — see{" "}
+          I speak at conferences and user groups on Microsoft Fabric
+          Real-Time Intelligence — recent stops include FabCon &amp; SQLCon,
+          DATACON Seattle, and SQLSaturday Pittsburgh — see{" "}
           <Link href="/speaking">Speaking</Link>.
         </p>
       </div>
