@@ -64,11 +64,11 @@ export default function AboutPage() {
           to events as they happen.
         </p>
         <p>
-          Before focusing on real-time systems, I spent years working across
-          data warehousing, semantic modeling, and enterprise analytics. That
-          background shapes how I think about the tradeoffs between batch and
-          streaming, and why most organizations are further from true
-          operational intelligence than they realize.
+          Before this, I spent years working across data warehousing,
+          real-time systems, semantic modeling, and enterprise analytics.
+          That background shapes how I think about the tradeoffs between
+          batch and streaming, and why most organizations are further from
+          true operational intelligence than they realize.
         </p>
         <p>
           I speak at conferences and user groups on Microsoft Fabric
