@@ -91,12 +91,14 @@ export default function RootLayout({
                 >
                   DARF
                 </Link>
-                <Link
-                  href="/articles"
+                <a
+                  href="https://realtimedispatch.substack.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-text-secondary hover:text-text-primary transition-colors whitespace-nowrap"
                 >
                   Writing
-                </Link>
+                </a>
                 <Link
                   href="/speaking"
                   className="text-sm text-text-secondary hover:text-text-primary transition-colors whitespace-nowrap"

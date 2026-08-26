@@ -63,12 +63,14 @@ export default function Home() {
                 {formatDate(article.date)}
               </span>
               <div>
-                <Link
-                  href={`/articles/${article.slug}`}
+                <a
+                  href={article.url || "https://realtimedispatch.substack.com/"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-text-primary hover:text-accent transition-colors font-medium leading-snug"
                 >
                   {article.title}
-                </Link>
+                </a>
                 {article.category && (
                   <p className="mt-1">
                     <span className="text-xs text-text-muted">
@@ -81,12 +83,14 @@ export default function Home() {
           ))}
         </ul>
         <div className="mt-10">
-          <Link
-            href="/articles"
+          <a
+            href="https://realtimedispatch.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm text-accent hover:underline"
           >
             All writing →
-          </Link>
+          </a>
         </div>
       </section>
 

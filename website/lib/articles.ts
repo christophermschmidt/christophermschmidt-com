@@ -13,6 +13,7 @@ export interface ArticleMeta {
   category: string;
   tags: string[];
   status: string;
+  url: string;
 }
 
 export interface Article extends ArticleMeta {
@@ -45,6 +46,7 @@ export function getAllArticles(): ArticleMeta[] {
         category: data.category || "",
         tags: Array.isArray(data.tags) ? data.tags : [],
         status: data.status || "",
+        url: data.url || "",
       } as ArticleMeta;
     })
     .filter((a) => a.status === "published")
@@ -72,6 +74,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
     category: data.category || "",
     tags: Array.isArray(data.tags) ? data.tags : [],
     status: data.status || "",
+    url: data.url || "",
     contentHtml: processed.toString(),
   };
 }
