@@ -75,22 +75,62 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         <div className="min-h-screen flex flex-col">
-          <header className="border-b border-border-default">
-            <nav className="max-w-content mx-auto px-6 h-14 flex items-center justify-between">
+          <header className="sticky top-0 z-50 border-b border-border-default bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+            <nav className="max-w-content mx-auto px-6 h-16 flex items-center justify-between">
               <Link
                 href="/"
-                className="text-sm font-semibold tracking-tight text-text-primary hover:text-accent transition-colors"
+                className="flex items-center gap-2.5 group"
                 aria-label="Christopher Schmidt — home"
               >
-                CS
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/Self-Portrait.png"
+                  alt=""
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 rounded-full object-cover border border-border-default"
+                />
+                <span className="text-sm font-semibold tracking-tight text-text-primary group-hover:text-accent transition-colors hidden sm:inline">
+                  Christopher Schmidt
+                </span>
               </Link>
               <div className="flex items-center gap-5 sm:gap-8 overflow-x-auto">
-                <Link
-                  href="/darf"
-                  className="text-sm text-text-secondary hover:text-text-primary transition-colors whitespace-nowrap"
-                >
-                  DARF
-                </Link>
+                <div className="relative group/darf">
+                  <Link
+                    href="/darf"
+                    className="flex items-center gap-1 text-sm text-text-secondary hover:text-text-primary transition-colors whitespace-nowrap"
+                  >
+                    DARF
+                    <svg
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="w-3.5 h-3.5 text-text-muted transition-transform group-hover/darf:rotate-180"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </Link>
+                  <div className="absolute left-0 top-full pt-2 hidden group-hover/darf:block">
+                    <div className="min-w-[190px] rounded-lg border border-border-default bg-background shadow-lg shadow-black/5 py-1.5">
+                      <Link
+                        href="/darf"
+                        className="block px-4 py-2 text-sm text-text-secondary hover:text-text-primary hover:bg-border-default/30 transition-colors"
+                      >
+                        Overview
+                      </Link>
+                      <Link
+                        href="/darf/capabilities"
+                        className="block px-4 py-2 text-sm text-text-secondary hover:text-text-primary hover:bg-border-default/30 transition-colors"
+                      >
+                        Capability Library
+                      </Link>
+                    </div>
+                  </div>
+                </div>
                 <a
                   href="https://realtimedispatch.substack.com/"
                   target="_blank"

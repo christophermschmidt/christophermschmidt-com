@@ -9,22 +9,36 @@ export default function Home() {
     <div className="max-w-content mx-auto px-6">
       {/* Hero */}
       <section className="pt-20 pb-16 border-b border-border-default">
-        <h1 className="text-3xl font-semibold tracking-tight text-text-primary mb-4">
-          Christopher Schmidt
-        </h1>
-        <p className="text-sm text-text-muted mb-5">
-          VP, Solutions Engineering and AI - Enterprise AI, iLink Digital
-        </p>
-        <p className="text-lg text-text-secondary leading-relaxed max-w-[560px]">
-          I write on ontologies, knowledge graphs, and real-time intelligence
-          in Microsoft Fabric — the shift from historical analytics to
-          embedding data into business processes. I created the{" "}
-          <Link href="/darf" className="text-accent hover:underline">
-            Data and AI Readiness Framework (DARF)
-          </Link>
-          , a two-pillar model for whether you can trust an AI system&apos;s
-          answer, and whether you can trust it to act on that answer.
-        </p>
+        <div className="flex flex-col-reverse sm:flex-row sm:items-center gap-8 sm:gap-10">
+          <div>
+            <h1 className="text-3xl font-semibold tracking-tight text-text-primary mb-4">
+              Christopher Schmidt
+            </h1>
+            <p className="text-sm text-text-muted mb-5">
+              VP, Solutions Engineering and AI - Enterprise AI, iLink Digital
+            </p>
+            <p className="text-lg text-text-secondary leading-relaxed max-w-[560px]">
+              I write on ontologies, knowledge graphs, and real-time
+              intelligence in Microsoft Fabric — the shift from historical
+              analytics to embedding data into business processes. I created
+              the{" "}
+              <Link href="/darf" className="text-accent hover:underline">
+                Data and AI Readiness Framework (DARF)
+              </Link>
+              , a two-pillar model for whether you can trust an AI
+              system&apos;s answer, and whether you can trust it to act on
+              that answer.
+            </p>
+          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/Self-Portrait.png"
+            alt="Christopher Schmidt"
+            width={144}
+            height={144}
+            className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border border-border-default shadow-md shadow-black/5 shrink-0"
+          />
+        </div>
       </section>
 
       {/* DARF */}
@@ -32,19 +46,21 @@ export default function Home() {
         <h2 className="text-xs font-semibold tracking-widest text-text-muted uppercase mb-4">
           Framework
         </h2>
-        <p className="text-text-secondary leading-relaxed mb-6 max-w-[560px]">
-          <strong className="text-text-primary">
-            The Data and AI Readiness Framework (DARF)
-          </strong>{" "}
-          — Semantic Readiness and Operational Readiness, eight layers, a
-          scored maturity rubric. This is the canonical, current version of
-          the framework.
-        </p>
         <Link
           href="/darf"
-          className="text-sm text-accent hover:underline"
+          className="group block rounded-xl border border-border-default p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-accent/40 transition-all"
         >
-          Explore DARF →
+          <p className="text-text-secondary leading-relaxed mb-4 max-w-[560px]">
+            <strong className="text-text-primary">
+              The Data and AI Readiness Framework (DARF)
+            </strong>{" "}
+            — Semantic Readiness and Operational Readiness, eight layers, a
+            scored maturity rubric. This is the canonical, current version of
+            the framework.
+          </p>
+          <span className="text-sm text-accent group-hover:underline">
+            Explore DARF →
+          </span>
         </Link>
       </section>
 
@@ -99,31 +115,33 @@ export default function Home() {
         <h2 className="text-xs font-semibold tracking-widest text-text-muted uppercase mb-4">
           Newsletter
         </h2>
-        <p className="text-text-secondary leading-relaxed mb-6 max-w-[480px]">
-          The Real Time Dispatch goes out weekly on Substack — covering
-          Eventhouse, Eventstream, KQL, and the shift from dashboards to
-          action systems.
-        </p>
-        <a
-          href="https://realtimedispatch.substack.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-5 py-2.5 bg-accent text-white text-sm font-medium rounded hover:opacity-90 transition-opacity"
-        >
-          Subscribe on Substack
-        </a>
-        <p className="mt-4 text-sm text-text-muted">
-          Also on{" "}
+        <div className="rounded-xl border border-border-default p-6 sm:p-8 shadow-sm">
+          <p className="text-text-secondary leading-relaxed mb-6 max-w-[480px]">
+            The Real Time Dispatch goes out weekly on Substack — covering
+            Eventhouse, Eventstream, KQL, and the shift from dashboards to
+            action systems.
+          </p>
           <a
-            href="https://www.linkedin.com/newsletters/the-real-time-dispatch-7368234962522755072/"
+            href="https://realtimedispatch.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent hover:underline"
+            className="inline-block px-5 py-2.5 bg-accent text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity"
           >
-            LinkedIn
-          </a>{" "}
-          as a shorter native excerpt.
-        </p>
+            Subscribe on Substack
+          </a>
+          <p className="mt-4 text-sm text-text-muted">
+            Also on{" "}
+            <a
+              href="https://www.linkedin.com/newsletters/the-real-time-dispatch-7368234962522755072/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline"
+            >
+              LinkedIn
+            </a>{" "}
+            as a shorter native excerpt.
+          </p>
+        </div>
       </section>
     </div>
   );

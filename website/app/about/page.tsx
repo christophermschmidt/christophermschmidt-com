@@ -10,12 +10,24 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="max-w-content mx-auto px-6 pt-16 pb-24">
-      <h1 className="text-2xl font-semibold tracking-tight text-text-primary mb-2">
-        About
-      </h1>
-      <p className="text-sm text-text-muted mb-10">
-        VP, Solutions Engineering and AI - Enterprise AI, iLink Digital
-      </p>
+      <div className="flex items-center gap-5 mb-10">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/Self-Portrait.png"
+          alt="Christopher Schmidt"
+          width={72}
+          height={72}
+          className="w-16 h-16 sm:w-18 sm:h-18 rounded-full object-cover border border-border-default shadow-sm shrink-0"
+        />
+        <div>
+          <h1 className="text-2xl font-semibold tracking-tight text-text-primary mb-1">
+            About
+          </h1>
+          <p className="text-sm text-text-muted">
+            VP, Solutions Engineering and AI - Enterprise AI, iLink Digital
+          </p>
+        </div>
+      </div>
       <div className="prose">
         <p>
           I&apos;m Christopher Schmidt. I&apos;m VP, Solutions Engineering and
