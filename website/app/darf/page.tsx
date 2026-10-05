@@ -96,25 +96,25 @@ export default function DarfPage() {
 
       <section className="border-t border-border-default py-12">
         <p className="text-xs font-semibold tracking-widest text-accent uppercase mb-3">
-          Assessment kit
+          Executive assessment kit
         </p>
         <h2 className="text-xl font-semibold tracking-tight text-text-primary mb-4">
-          Take DARF from framework to evidence-backed decision
+          Data and AI Readiness Executive Assessment Kit
         </h2>
         <p className="text-text-secondary leading-relaxed mb-6 max-w-[600px]">
-          The DARF Assessment Kit helps executives and consultants assess
-          Semantic Readiness and Operational Readiness separately, expose the
-          evidence gaps behind each conclusion, and turn the findings into a
-          practical sequence of decisions. It includes the field guide,
-          interactive Excel assessment, three completed fictional examples,
-          and editable executive presentation and readout templates.
+          The kit helps executives and consultants expose the evidence gaps
+          behind readiness claims and turn the findings into a practical
+          sequence of decisions. It includes the field guide, interactive Excel
+          assessment, three completed fictional examples, and editable
+          executive presentation and readout templates. The Data and AI
+          Readiness Framework provides the supporting two-pillar methodology.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <Link
             href="/darf/assessment"
             className="inline-flex w-fit items-center rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
-            Explore the assessment kit &rarr;
+            Explore the Data and AI Readiness Executive Assessment Kit &rarr;
           </Link>
           <span className="text-sm text-text-muted">
             $49 one-time purchase after release review

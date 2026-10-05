@@ -3,12 +3,12 @@ import Link from "next/link";
 import { assessmentProduct } from "@/lib/assessment-product";
 
 export const metadata: Metadata = {
-  title: "DARF Assessment Kit",
+  title: "Data and AI Readiness Executive Assessment Kit",
   description:
-    "A practical, evidence-based DARF assessment kit for executives and consultants, with an Excel assessment, field guide, completed examples, and editable executive templates.",
+    "A practical, evidence-based assessment kit for executives and consultants, with an Excel assessment, field guide, completed examples, and editable executive templates.",
   alternates: { canonical: "/darf/assessment" },
   openGraph: {
-    title: "DARF Assessment Kit",
+    title: "Data and AI Readiness Executive Assessment Kit",
     description:
       "Assess Semantic Readiness and Operational Readiness separately, identify evidence gaps, and turn the findings into practical executive decisions.",
     url: "https://christophermschmidt.com/darf/assessment",
@@ -81,7 +81,7 @@ function PurchaseAction({ compact = false }: { compact?: boolean }) {
       rel="noopener noreferrer"
       className="inline-flex items-center justify-center rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
     >
-      Get the assessment kit for {assessmentProduct.price}
+      Get the {assessmentProduct.name} for {assessmentProduct.price}
     </a>
   );
 }
@@ -98,11 +98,14 @@ export default function DarfAssessmentPage() {
 
       <section className="border-b border-border-default pb-14">
         <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent">
-          DARF assessment kit
+          Executive assessment kit
         </p>
-        <h1 className="mb-5 max-w-[640px] text-3xl font-semibold tracking-tight text-text-primary sm:text-4xl">
-          Turn readiness questions into evidence-backed decisions
+        <h1 className="mb-4 max-w-[660px] text-3xl font-semibold tracking-tight text-text-primary sm:text-4xl">
+          {assessmentProduct.name}
         </h1>
+        <h2 className="mb-5 max-w-[640px] text-xl font-semibold tracking-tight text-text-primary">
+          Turn readiness questions into evidence-backed decisions
+        </h2>
         <p className="mb-8 max-w-[640px] text-lg leading-relaxed text-text-secondary">
           Most AI readiness assessments end with a single score. That hides the
           decision leaders actually need to make: whether they can trust the
@@ -121,6 +124,15 @@ export default function DarfAssessmentPage() {
           </div>
           <PurchaseAction />
         </div>
+        <p className="mt-4 text-sm leading-relaxed text-text-muted">
+          Full refunds are available within 14 days. Questions?{" "}
+          <a
+            href="mailto:christophermschmidt7@gmail.com"
+            className="text-accent hover:underline"
+          >
+            christophermschmidt7@gmail.com
+          </a>
+        </p>
       </section>
 
       <section className="border-b border-border-default py-14">
@@ -131,9 +143,10 @@ export default function DarfAssessmentPage() {
           The shape of the gap matters more than the score
         </h2>
         <p className="mb-8 max-w-[620px] leading-relaxed text-text-secondary">
-          DARF keeps Semantic Readiness and Operational Readiness separate. The
-          same overall average can hide three materially different situations,
-          each requiring a different executive response.
+          The assessment uses the Data and AI Readiness Framework methodology
+          to keep Semantic Readiness and Operational Readiness separate. The
+          same overall average can hide three materially different situations.
+          Each requires a different executive response.
         </p>
         <div className="grid gap-5 sm:grid-cols-3">
           {profiles.map((profile, index) => (

@@ -1,7 +1,7 @@
-const gumroadUrl = process.env.DARF_ASSESSMENT_GUMROAD_URL;
+const gumroadUrl = process.env.EXECUTIVE_ASSESSMENT_GUMROAD_URL;
 
 export const assessmentProduct = {
-  name: "DARF Assessment Kit",
+  name: "Data and AI Readiness Executive Assessment Kit",
   price: "$49",
   purchaseUrl: validateGumroadUrl(gumroadUrl),
 };

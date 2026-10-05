@@ -132,7 +132,7 @@ export default function RootLayout({
                         href="/darf/assessment"
                         className="block px-4 py-2 text-sm text-text-secondary hover:text-text-primary hover:bg-border-default/30 transition-colors"
                       >
-                        Assessment Kit
+                        Executive Assessment Kit
                       </Link>
                     </div>
                   </div>

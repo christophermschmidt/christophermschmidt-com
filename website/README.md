@@ -1,12 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## DARF assessment purchase link
+## Executive assessment purchase link
 
-The DARF assessment page renders a Gumroad purchase link only when a verified
+The executive assessment page renders a Gumroad purchase link only when a verified
 HTTPS Gumroad URL is supplied at build time:
 
 ```bash
-DARF_ASSESSMENT_GUMROAD_URL=https://verified-product.gumroad.com/l/verified-slug npm run build
+EXECUTIVE_ASSESSMENT_GUMROAD_URL=https://verified-product.gumroad.com/l/verified-slug npm run build
 ```
 
 Leave the variable unset during drafting and release QA. The page will show a
