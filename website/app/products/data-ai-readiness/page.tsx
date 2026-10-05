@@ -5,12 +5,12 @@ import { assessmentProduct } from "@/lib/assessment-product";
 export const metadata: Metadata = {
   title: "Data and AI Readiness Executive Assessment Kit",
   description:
-    "A practical, evidence-based assessment kit for executives and consultants, with an Excel assessment, field guide, completed examples, and editable executive templates.",
+    "A practical, evidence-based assessment kit with a guided Excel workbook, field guide, completed examples, and editable executive readout and presentation templates.",
   alternates: { canonical: "/products/data-ai-readiness" },
   openGraph: {
     title: "Data and AI Readiness Executive Assessment Kit",
     description:
-      "Assess Semantic Readiness and Operational Readiness separately, identify evidence gaps, and turn the findings into practical executive decisions.",
+      "Assess a defined AI use case across Semantic, AI, and Context profiles, keep evidence gaps visible, and turn the findings into practical executive decisions.",
     url: "https://christophermschmidt.com/products/data-ai-readiness",
     type: "website",
   },
@@ -18,39 +18,43 @@ export const metadata: Metadata = {
 
 const profiles = [
   {
-    title: "Trusted answers, constrained action",
-    body: "Semantic Readiness is ahead of Operational Readiness. The organization may have dependable definitions and lineage. Its context may be stable. Authority, execution controls, or auditability still limit what an AI system should be allowed to do.",
+    title: "Semantic",
+    body: "Examine whether shared meaning is defined well enough for people and systems to interpret data consistently. The profile focuses on definitions and ownership, with alignment tied back to evidence.",
   },
   {
-    title: "Fast action, weak context",
-    body: "Operational Readiness is ahead of Semantic Readiness. The system can execute, but the meaning behind its decisions is inconsistent or difficult to verify. This is where speed can make a bad answer more expensive.",
+    title: "AI",
+    body: "Examine whether data, controls, and operating practices support the intended AI use. The profile keeps fitness and limits visible, with accountability tied to action.",
   },
   {
-    title: "Evidence-backed balance",
-    body: "Both pillars are supported for the use case being assessed. This is not a claim that the organization is universally ready. It means the current scope has enough evidence to justify specific decisions, controls, and next steps.",
+    title: "Context",
+    body: "Examine whether the surrounding business and operational context can travel with the data. The profile connects interpretation and boundaries to provenance and use.",
   },
 ];
 
 const kitContents = [
   {
-    title: "Executive field guide",
-    body: "A practical explanation of the two pillars, the assessment method, and how to read the results without collapsing them into one score.",
+    title: "36-page executive field guide",
+    body: "The full assessment guide in editable Word and shareable PDF formats.",
   },
   {
-    title: "Interactive Excel assessment",
-    body: "A working assessment with capability-level maturity and evidence status. It connects prerequisite context to executive outputs.",
+    title: "Four guided Excel workbooks",
+    body: "One blank assessment and three completed fictional examples. Each uses a guided six-stage workflow and includes three radar charts.",
   },
   {
-    title: "Three completed examples",
-    body: "Fictional small, medium, and large enterprise scenarios showing how different evidence and readiness patterns change the conclusion.",
+    title: "Completed examples",
+    body: "Three fictional cases show how different evidence patterns produce different readiness profiles and carry into the executive deliverables.",
   },
   {
-    title: "Editable PowerPoint example and template",
-    body: "A presentation format for walking stakeholders through the assessment, findings, and remediation priorities.",
+    title: "Editable executive presentations",
+    body: "A completed 15-slide example and reusable PowerPoint template, each paired with a PDF.",
   },
   {
-    title: "Standalone executive readout and template",
-    body: "A concise deliverable for leaders who need the decisions, evidence gaps, and next actions without the full workbook walkthrough.",
+    title: "Executive readouts",
+    body: "A completed one-page readout and reusable template in Word and PDF. The blank PDF includes fillable fields.",
+  },
+  {
+    title: "Start Here guide",
+    body: "A concise orientation to the kit, file set, and starting sequence in Word and PDF.",
   },
 ];
 
@@ -107,16 +111,16 @@ export default function DataAiReadinessProductPage() {
           Turn readiness questions into evidence-backed decisions
         </h2>
         <p className="mb-8 max-w-[640px] text-lg leading-relaxed text-text-secondary">
-          Most AI readiness assessments end with a single score. That hides the
-          decision leaders actually need to make: whether they can trust the
-          answer, whether they can trust the system to act on it, and what
-          evidence supports either conclusion.
+          Readiness claims become expensive when assumptions quietly turn into
+          facts. This kit gives assessment owners a guided way to gather the
+          evidence and hold unknowns open. It then connects operating limits to
+          the actions and named owners that follow.
         </p>
 
         <div className="rounded-xl border border-border-default bg-white/35 p-6 shadow-sm sm:flex sm:items-center sm:justify-between sm:gap-8 sm:p-8">
           <div className="mb-6 sm:mb-0">
             <p className="text-sm font-medium text-text-secondary">
-              One-time purchase for executives and consultants
+              One-time license for internal and client use
             </p>
             <p className="mt-1 text-3xl font-semibold tracking-tight text-text-primary">
               {assessmentProduct.price}
@@ -140,16 +144,13 @@ export default function DataAiReadinessProductPage() {
           Three readiness profiles
         </p>
         <h2 className="mb-4 text-2xl font-semibold tracking-tight text-text-primary">
-          The shape of the gap matters more than the score
+          Keep three different questions separate
         </h2>
         <p className="mb-8 max-w-[620px] leading-relaxed text-text-secondary">
-          The assessment uses the{" "}
-          <Link href="/darf" className="text-accent hover:underline">
-            Data and AI Readiness Framework
-          </Link>{" "}
-          methodology to keep Semantic Readiness and Operational Readiness
-          separate. The same overall average can hide three materially
-          different situations. Each requires a different executive response.
+          Semantic, AI, and Context readiness describe different conditions.
+          The workbook keeps them separate so one strong area does not conceal
+          a limit in another. Each profile is tied back to evidence and to the
+          defined use case being assessed.
         </p>
         <div className="grid gap-5 sm:grid-cols-3">
           {profiles.map((profile, index) => (
@@ -225,6 +226,20 @@ export default function DataAiReadinessProductPage() {
         </div>
       </section>
 
+      <section className="border-b border-border-default py-14">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-muted">
+          License
+        </p>
+        <h2 className="mb-4 text-xl font-semibold tracking-tight text-text-primary">
+          Use it with your organization and your clients
+        </h2>
+        <p className="max-w-[640px] leading-relaxed text-text-secondary">
+          Your one-time purchase covers internal use and client engagements. It
+          does not permit reselling or redistributing the blank templates as a
+          standalone product.
+        </p>
+      </section>
+
       <section className="py-14">
         <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-muted">
           Scope
@@ -233,12 +248,20 @@ export default function DataAiReadinessProductPage() {
           A structured assessment, not a certification
         </h2>
         <p className="mb-8 max-w-[640px] leading-relaxed text-text-secondary">
-          The kit does not certify an organization, guarantee an implementation
+          This kit does not certify an organization, guarantee an implementation
           outcome, or replace experienced consulting judgment. It provides a
           shared method, explicit evidence expectations, and editable materials
-          for making the assessment reviewable. The conclusion still depends on
+          for making the assessment reviewable. Its conclusion still depends on
           the use case, the evidence available, and the people accountable for
           the decision.
+        </p>
+        <p className="mb-8 max-w-[640px] leading-relaxed text-text-secondary">
+          For supporting framework context, see the public{" "}
+          <Link href="/darf" className="text-accent hover:underline">
+            Data and AI Readiness Framework
+          </Link>
+          . The kit is the packaged assessment product with the guided workbook
+          and executive artifacts.
         </p>
         <PurchaseAction compact />
       </section>

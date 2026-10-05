@@ -2,15 +2,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Executive assessment purchase link
 
-The executive assessment page renders a Gumroad purchase link only when a verified
-HTTPS Gumroad URL is supplied at build time:
-
-```bash
-EXECUTIVE_ASSESSMENT_GUMROAD_URL=https://verified-product.gumroad.com/l/verified-slug npm run build
-```
-
-Leave the variable unset during drafting and release QA. The page will show a
-non-clickable release-review status instead. Never deploy a placeholder URL.
+The verified public Gumroad URL is stored in `lib/assessment-product.ts`. The
+helper accepts only HTTPS Gumroad hosts. Confirm the public product page before
+changing the URL, and never deploy a placeholder.
 
 ## Getting Started
 

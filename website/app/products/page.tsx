@@ -46,19 +46,19 @@ export default function ProductsPage() {
             </Link>
           </h2>
           <p className="mb-6 max-w-[600px] leading-relaxed text-text-secondary">
-            Assess Semantic Readiness and Operational Readiness separately,
-            expose evidence gaps, and turn the findings into a practical
-            sequence of executive decisions. The download includes an
-            interactive Excel assessment and field guide. It also includes
-            three completed fictional examples plus editable presentation and
-            readout templates.
+            Assess a defined AI use case across Semantic, AI, and Context
+            profiles. The guided workbook keeps evidence gaps and unknowns
+            visible, then carries the findings into actions with named owners.
+            The 16-file kit includes a 36-page field guide and four Excel
+            workbooks. It also includes three completed fictional examples plus
+            editable executive presentation and readout templates.
           </p>
           <div className="mb-6 flex flex-col gap-1 text-sm sm:flex-row sm:gap-6">
             <span className="font-medium text-text-primary">
               {assessmentProduct.price} one-time
             </span>
             <span className="text-text-muted">
-              For executives and consultants
+              Licensed for internal and client use
             </span>
           </div>
           <Link

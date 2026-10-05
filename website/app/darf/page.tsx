@@ -102,12 +102,12 @@ export default function DarfPage() {
           Data and AI Readiness Executive Assessment Kit
         </h2>
         <p className="text-text-secondary leading-relaxed mb-6 max-w-[600px]">
-          The kit helps executives and consultants expose the evidence gaps
-          behind readiness claims and turn the findings into a practical
-          sequence of decisions. It includes the field guide, interactive Excel
-          assessment, three completed fictional examples, and editable
-          executive presentation and readout templates. The Data and AI
-          Readiness Framework provides the supporting two-pillar methodology.
+          This guided assessment applies to a defined AI use case across
+          Semantic, AI, and Context profiles. It keeps evidence gaps and
+          unknowns visible, then carries the findings into actions with named
+          owners. The framework provides supporting context. The product adds
+          the guided Excel workbooks and completed examples. It also includes
+          the field guide plus executive presentation and readout artifacts.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <Link
@@ -117,7 +117,7 @@ export default function DarfPage() {
             Explore the Data and AI Readiness Executive Assessment Kit &rarr;
           </Link>
           <span className="text-sm text-text-muted">
-            $49 one-time purchase after release review
+            $49 one-time purchase
           </span>
         </div>
       </section>

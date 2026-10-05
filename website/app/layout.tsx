@@ -76,7 +76,7 @@ export default function RootLayout({
         />
         <div className="min-h-screen flex flex-col">
           <header className="sticky top-0 z-50 border-b border-border-default bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
-            <nav className="max-w-content mx-auto px-6 h-16 flex items-center justify-between">
+            <nav className="max-w-content mx-auto flex min-h-16 items-center gap-3 px-6 py-3">
               <Link
                 href="/"
                 className="flex items-center gap-2.5 group"
@@ -94,7 +94,7 @@ export default function RootLayout({
                   Christopher Schmidt
                 </span>
               </Link>
-              <div className="flex items-center gap-3 sm:gap-6">
+              <div className="flex flex-1 flex-wrap items-center justify-end gap-x-3 gap-y-1 sm:flex-none sm:flex-nowrap sm:gap-6">
                 <div className="relative group/darf">
                   <Link
                     href="/darf"
