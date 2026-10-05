@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Data and AI Readiness Executive Assessment Kit",
   description:
     "A practical, evidence-based assessment kit for executives and consultants, with an Excel assessment, field guide, completed examples, and editable executive templates.",
-  alternates: { canonical: "/darf/assessment" },
+  alternates: { canonical: "/products/data-ai-readiness" },
   openGraph: {
     title: "Data and AI Readiness Executive Assessment Kit",
     description:
       "Assess Semantic Readiness and Operational Readiness separately, identify evidence gaps, and turn the findings into practical executive decisions.",
-    url: "https://christophermschmidt.com/darf/assessment",
+    url: "https://christophermschmidt.com/products/data-ai-readiness",
     type: "website",
   },
 };
@@ -86,14 +86,14 @@ function PurchaseAction({ compact = false }: { compact?: boolean }) {
   );
 }
 
-export default function DarfAssessmentPage() {
+export default function DataAiReadinessProductPage() {
   return (
     <div className="max-w-content mx-auto px-6 pt-16 pb-24">
       <Link
-        href="/darf"
+        href="/products"
         className="mb-8 inline-block text-sm text-text-muted transition-colors hover:text-accent"
       >
-        &larr; DARF overview
+        &larr; All products
       </Link>
 
       <section className="border-b border-border-default pb-14">
@@ -143,10 +143,13 @@ export default function DarfAssessmentPage() {
           The shape of the gap matters more than the score
         </h2>
         <p className="mb-8 max-w-[620px] leading-relaxed text-text-secondary">
-          The assessment uses the Data and AI Readiness Framework methodology
-          to keep Semantic Readiness and Operational Readiness separate. The
-          same overall average can hide three materially different situations.
-          Each requires a different executive response.
+          The assessment uses the{" "}
+          <Link href="/darf" className="text-accent hover:underline">
+            Data and AI Readiness Framework
+          </Link>{" "}
+          methodology to keep Semantic Readiness and Operational Readiness
+          separate. The same overall average can hide three materially
+          different situations. Each requires a different executive response.
         </p>
         <div className="grid gap-5 sm:grid-cols-3">
           {profiles.map((profile, index) => (

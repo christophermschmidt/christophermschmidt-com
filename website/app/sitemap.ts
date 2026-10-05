@@ -10,8 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${base}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/darf`, changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/darf/assessment`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/darf/capabilities`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/products`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/products/data-ai-readiness`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/articles`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${base}/speaking`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${base}/about`, changeFrequency: "monthly", priority: 0.5 },

@@ -94,7 +94,7 @@ export default function RootLayout({
                   Christopher Schmidt
                 </span>
               </Link>
-              <div className="flex items-center gap-5 sm:gap-8">
+              <div className="flex items-center gap-3 sm:gap-6">
                 <div className="relative group/darf">
                   <Link
                     href="/darf"
@@ -128,15 +128,15 @@ export default function RootLayout({
                       >
                         Capability Library
                       </Link>
-                      <Link
-                        href="/darf/assessment"
-                        className="block px-4 py-2 text-sm text-text-secondary hover:text-text-primary hover:bg-border-default/30 transition-colors"
-                      >
-                        Executive Assessment Kit
-                      </Link>
                     </div>
                   </div>
                 </div>
+                <Link
+                  href="/products"
+                  className="text-sm text-text-secondary hover:text-text-primary transition-colors whitespace-nowrap"
+                >
+                  Products
+                </Link>
                 <a
                   href="https://realtimedispatch.substack.com/"
                   target="_blank"

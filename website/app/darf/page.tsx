@@ -111,7 +111,7 @@ export default function DarfPage() {
         </p>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <Link
-            href="/darf/assessment"
+            href="/products/data-ai-readiness"
             className="inline-flex w-fit items-center rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
             Explore the Data and AI Readiness Executive Assessment Kit &rarr;
