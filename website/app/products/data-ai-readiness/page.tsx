@@ -260,7 +260,7 @@ export default function DataAiReadinessProductPage() {
           <Link href="/darf" className="text-accent hover:underline">
             Data and AI Readiness Framework
           </Link>
-          . The kit is the packaged assessment product with the guided workbook
+          {". "}The kit is the packaged assessment product with the guided workbook
           and executive artifacts.
         </p>
         <PurchaseAction compact />
