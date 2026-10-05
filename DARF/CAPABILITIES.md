@@ -13,6 +13,10 @@ eleven gaps surfaced by a 2026 landscape review (README Section 10), and three
 covering the unstructured estate — documents, procedures and conversation —
 which the original seed set omitted entirely (README Section 12).*
 
+*Recovered original-source preservation 2026-10-05. Two capabilities added on
+2026-08-26 bring the versioned and live totals to 53: Model capability
+validation and Policy change governance.*
+
 **Every page stands alone.** A reader who opens one capability page with no
 prior knowledge of DARF should be able to understand what the capability is,
 why it matters, how to score it, and where the argument comes from. The
@@ -117,12 +121,14 @@ the unstructured estate lives. Resist the urge to balance it by splitting.
 | [Automation authority and handback](capabilities/Automation%20authority%20and%20handback.md) **new** | Explicit authority grants, Scoped limits |
 | [Escalation paths](capabilities/Escalation%20paths.md) | Automation authority and handback |
 | [Policy-as-code patterns](capabilities/Policy-as-code%20patterns.md) | Explicit authority grants, Scoped limits |
+| [Policy change governance](capabilities/Policy%20change%20governance.md) **new** | Explicit authority grants, Agent identity and delegation |
 
 ### Execution
 
 | Capability | Prerequisites |
 |---|---|
 | [Vendor-agnostic execution-layer selection](capabilities/Vendor-agnostic%20execution-layer%20selection.md) | — |
+| [Model capability validation](capabilities/Model%20capability%20validation.md) **new** | Vendor-agnostic execution-layer selection, Action scoping |
 | [Intelligence routing](capabilities/Intelligence%20routing.md) | Vendor-agnostic execution-layer selection, Query admissibility, Procedural knowledge capture |
 | [Action scoping](capabilities/Action%20scoping.md) | Explicit authority grants, Scoped limits |
 | [Reversibility and compensating action](capabilities/Reversibility%20and%20compensating%20action.md) **new** | Action scoping, State binding correctness |
@@ -157,12 +163,12 @@ inventing capabilities or suppressing real ones.
 | Semantic Readiness | Analytical Explainability | 4 |
 | Semantic Readiness | AI Readiness & Interoperability | 11 |
 | Operational Readiness | State | 3 |
-| Operational Readiness | Policy | 7 |
-| Operational Readiness | Execution | 9 |
+| Operational Readiness | Policy | 8 |
+| Operational Readiness | Execution | 10 |
 | Operational Readiness | Audit | 5 |
-| | **Total** | **51** |
+| | **Total** | **53** |
 
-Pillar 1 carries 27 capabilities and Pillar 2 carries 24. The imbalance is
+Pillar 1 carries 27 capabilities and Pillar 2 carries 26. The imbalance is
 real and is not a modeling error: Pillar 1 covers a thirty-year-old discipline
 with a long list of known failure modes, while Pillar 2 covers a four-year-old
 one. Expect Pillar 2 to grow faster.
@@ -218,6 +224,6 @@ the domain, not a modeling error.
 Capability pages are deliberately vendor-neutral. Each one ends with a pointer
 to its row in `../MicrosoftIQ.html`, which scores the
 original 33 against the Microsoft stack (0 native · 22 partial · 9 pattern ·
-2 gap) and states what has to be built. Fourteen capabilities have no row there
+2 gap) and states what has to be built. Sixteen capabilities have no row there
 because they postdate that pass; their pages say so and name the nearest
 primitive.
