@@ -94,6 +94,34 @@ export default function DarfPage() {
         ))}
       </div>
 
+      <section className="border-t border-border-default py-12">
+        <p className="text-xs font-semibold tracking-widest text-accent uppercase mb-3">
+          Assessment kit
+        </p>
+        <h2 className="text-xl font-semibold tracking-tight text-text-primary mb-4">
+          Take DARF from framework to evidence-backed decision
+        </h2>
+        <p className="text-text-secondary leading-relaxed mb-6 max-w-[600px]">
+          The DARF Assessment Kit helps executives and consultants assess
+          Semantic Readiness and Operational Readiness separately, expose the
+          evidence gaps behind each conclusion, and turn the findings into a
+          practical sequence of decisions. It includes the field guide,
+          interactive Excel assessment, three completed fictional examples,
+          and editable executive presentation and readout templates.
+        </p>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <Link
+            href="/darf/assessment"
+            className="inline-flex w-fit items-center rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
+          >
+            Explore the assessment kit &rarr;
+          </Link>
+          <span className="text-sm text-text-muted">
+            $49 one-time purchase after release review
+          </span>
+        </div>
+      </section>
+
       <div className="border-t border-border-default pt-10">
         <h2 className="text-xs font-semibold tracking-widest text-text-muted uppercase mb-4">
           Capability library
