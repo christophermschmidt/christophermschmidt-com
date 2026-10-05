@@ -1,4 +1,5 @@
-const gumroadUrl = process.env.EXECUTIVE_ASSESSMENT_GUMROAD_URL;
+const gumroadUrl =
+  "https://schmidtster11.gumroad.com/l/dataandaiexecassessment";
 
 export const assessmentProduct = {
   gumroadProductId: "fuwlq",
