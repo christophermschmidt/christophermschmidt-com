@@ -4,7 +4,7 @@ date: 2026-07-02
 slug: explaining-isnt-fixing
 category: architecture-strategy
 tags: [agentic-ai, action-systems, activator, operational-state, governance]
-url: https://realtimedispatch.substack.com/p/explaining-isnt-fixing
+url: https://realtimedispatch.substack.com/p/why-explaining-the-problem-isnt-the
 status: published
 ---
 

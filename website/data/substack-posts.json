@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "2026-10-08-stop-rushing-to-ask-an-agent-what",
+    "title": "Stop Rushing to Ask an Agent What Was True of the World Yesterday",
+    "date": "2026-10-08",
+    "category": "architecture-strategy",
+    "url": "https://realtimedispatch.substack.com/p/stop-rushing-to-ask-an-agent-what",
+    "excerpt": "The rush to talk to your data is moving faster than the live state, policy, and audit trail agents need."
+  },
+  {
+    "slug": "2026-09-03-fabric-graph-vs-the-sql-endpoint",
+    "title": "Fabric Graph vs the SQL Endpoint, with Claude doing the testing",
+    "date": "2026-09-03",
+    "category": "architecture-strategy",
+    "url": "https://realtimedispatch.substack.com/p/fabric-graph-vs-the-sql-endpoint",
+    "excerpt": "Six lines on the query language cut graph&#8217;s bill by 60%."
+  },
+  {
+    "slug": "2026-08-27-why-ai-readiness-is-two-questions",
+    "title": "Why AI Readiness is Two Questions, not one score",
+    "date": "2026-08-27",
+    "category": "architecture-strategy",
+    "url": "https://realtimedispatch.substack.com/p/why-ai-readiness-is-two-questions",
+    "excerpt": "A framework can be excellent at grounding an answer and still have no idea who&#8217;s allowed to act on it"
+  },
+  {
+    "slug": "2026-08-13-the-relationships-that-matter-arent",
+    "title": "The relationships that matter aren't in any semantic models",
+    "date": "2026-08-13",
+    "category": "architecture-strategy",
+    "url": "https://realtimedispatch.substack.com/p/the-relationships-that-matter-arent",
+    "excerpt": "Fabric IQ inherits your join keys. A join key can't tell an agent which stores a late shipment reaches."
+  },
+  {
+    "slug": "2026-07-30-microsoft-iq-and-databricks-genie",
+    "title": "Microsoft IQ and Databricks Genie Are Chasing the Same Thing. Power BI Developers Already Have It.",
+    "date": "2026-07-30",
+    "category": "architecture-strategy",
+    "url": "https://realtimedispatch.substack.com/p/microsoft-iq-and-databricks-genie",
+    "excerpt": "Why the semantic model is the grounding contract for agents, and how to start operationalizing the reports you already own."
+  },
+  {
+    "slug": "2026-07-23-who-is-your-data-rfp-optimizing-for",
+    "title": "Who Is Your Data RFP Optimizing For?",
+    "date": "2026-07-23",
+    "category": "architecture-strategy",
+    "url": "https://realtimedispatch.substack.com/p/who-is-your-data-rfp-optimizing-for",
+    "excerpt": "Stop building for the builder. Learn why most AI projects fail because they optimize for the construction of the system rather than the logic of the decision."
+  },
+  {
+    "slug": "2026-07-09-stop-dooming-the-bi-developer",
+    "title": "Stop Dooming the BI Developer",
+    "date": "2026-07-09",
+    "category": "architecture-strategy",
+    "url": "https://realtimedispatch.substack.com/p/stop-dooming-the-bi-developer",
+    "excerpt": "Dashboards tell you what was. The next decade belongs to what is."
+  },
+  {
+    "slug": "2026-07-06-your-schema-has-a-blind-spot-nobody",
+    "title": "Your schema has a blind spot nobody audited for",
+    "date": "2026-07-06",
+    "category": "architecture-strategy",
+    "url": "https://realtimedispatch.substack.com/p/your-schema-has-a-blind-spot-nobody",
+    "excerpt": "We spend a lot of time focusing on the data we do have, but what about the data we never thought of?"
+  },
+  {
+    "slug": "2026-07-02-why-explaining-the-problem-isnt-the",
+    "title": "Why explaining the problem isn't the same as being trusted to fix it",
+    "date": "2026-07-02",
+    "category": "architecture-strategy",
+    "url": "https://realtimedispatch.substack.com/p/why-explaining-the-problem-isnt-the",
+    "excerpt": "Picture a dispatcher at 9:12 on a Tuesday morning."
+  },
+  {
+    "slug": "2026-06-23-opentelemetry-monitoring-for-ai-agents",
+    "title": "OpenTelemetry Monitoring for AI Agents Using Microsoft Fabric",
+    "date": "2026-06-23",
+    "category": "real-time",
+    "url": "https://realtimedispatch.substack.com/p/opentelemetry-monitoring-for-ai-agents",
+    "excerpt": "Every LLM call your code makes is an event with structure: a user, a deployment, a token count, a latency, a finish reason."
+  },
+  {
+    "slug": "2026-06-23-seamlessly-ingesting-xml-data-into",
+    "title": "Seamlessly Ingesting XML Data into Eventhouse",
+    "date": "2026-06-23",
+    "category": "real-time",
+    "url": "https://realtimedispatch.substack.com/p/seamlessly-ingesting-xml-data-into",
+    "excerpt": "As organizations increasingly rely on real-time data streaming for analytics and operations, integrating various data formats into modern event stores becomes a critical task."
+  }
+]

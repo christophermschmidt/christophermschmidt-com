@@ -1,11 +1,11 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAllArticles, getArticleBySlug } from "@/lib/articles";
+import { getAllLocalArticles, getArticleBySlug, isExternalArticleUrl } from "@/lib/articles";
 import { formatDateLong, categoryLabel } from "@/lib/format";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
-  return getAllArticles().map((a) => ({ slug: a.slug }));
+  return getAllLocalArticles().map((a) => ({ slug: a.slug }));
 }
 
 export async function generateMetadata({
@@ -16,14 +16,16 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = await getArticleBySlug(slug);
   if (!article) return {};
-  const url = `/articles/${article.slug}`;
+  const localUrl = `/articles/${article.slug}`;
+  const canonical = isExternalArticleUrl(article.url) ? article.url : localUrl;
   return {
     title: article.title,
-    alternates: { canonical: url },
+    description: article.excerpt || undefined,
+    alternates: { canonical },
     openGraph: {
       title: article.title,
       type: "article",
-      url: `https://christophermschmidt.com${url}`,
+      url: canonical.startsWith("https://") ? canonical : `https://christophermschmidt.com${canonical}`,
     },
   };
 }
@@ -36,6 +38,7 @@ export default async function ArticlePage({
   const { slug } = await params;
   const article = await getArticleBySlug(slug);
   if (!article) notFound();
+  const external = isExternalArticleUrl(article.url);
 
   return (
     <div className="max-w-content mx-auto px-6 pt-16 pb-24">
@@ -66,10 +69,18 @@ export default async function ArticlePage({
         )}
       </div>
 
-      <div
-        className="prose"
-        dangerouslySetInnerHTML={{ __html: article.contentHtml }}
-      />
+      {external ? (
+        <div className="prose original-source-landing">
+          {article.excerpt && <p>{article.excerpt}</p>}
+          <p>This article is published on The Real Time Dispatch. The original source remains the current version.</p>
+          <p><a href={article.url} target="_blank" rel="noopener noreferrer">Read the original article on Substack ↗</a></p>
+        </div>
+      ) : (
+        <div
+          className="prose"
+          dangerouslySetInnerHTML={{ __html: article.contentHtml }}
+        />
+      )}
 
       <div className="mt-16 pt-8 border-t border-border-default">
         <Link href="/articles" className="text-sm text-accent hover:underline">

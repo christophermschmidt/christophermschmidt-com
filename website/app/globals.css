@@ -225,6 +225,7 @@ h3 { font-size: 1.75rem; }
 .writing-list-page { max-width: 60rem; }
 .writing-list-page .writing-item { padding: 1.7rem 0; }
 .writing-list-page h3 { font-size: 1.9rem; }
+.writing-excerpt { color: #52605b; font-size: .82rem; line-height: 1.7; margin-top: .65rem; max-width: 48rem; }
 .article-count { margin-top: 1.5rem; }
 .speaking-selection { padding-top: 1rem; }
 .three-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.2rem; }

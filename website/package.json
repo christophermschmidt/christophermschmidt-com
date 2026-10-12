@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "sync:substack": "node scripts/sync-substack.mjs",
+    "prebuild": "node scripts/sync-substack.mjs",
     "build": "next build",
     "postbuild": "node scripts/write-deployment-headers.mjs",
     "start": "next start",
