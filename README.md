@@ -23,7 +23,7 @@ provides `CF_PAGES_BRANCH`; builds whose branch differs from the production
 branch receive an `X-Robots-Tag: noindex, nofollow, noarchive` header through
 both the ordinary static export (`website/out/_headers`) and the configured
 Cloudflare adapter output (`website/.vercel/output/static/_headers`). The
-production branch remains indexable. The production branch defaults to `main`,
+production branch remains indexable. The production branch defaults to `master`,
 matching the verified Pages project configuration, and can be set explicitly
 with `SITE_PRODUCTION_BRANCH` if that configuration changes.
 
