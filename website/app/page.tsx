@@ -1,148 +1,18 @@
 import Link from "next/link";
 import { getAllArticles } from "@/lib/articles";
-import { formatDate, categoryLabel } from "@/lib/format";
+import { ApproachSteps, Arrow, CaseGrid, Closing, DarfPillars, Foundations } from "./_components/primitives";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function Home() {
-  const articles = getAllArticles().slice(0, 5);
-
-  return (
-    <div className="max-w-content mx-auto px-6">
-      {/* Hero */}
-      <section className="pt-20 pb-16 border-b border-border-default">
-        <div className="flex flex-col-reverse sm:flex-row sm:items-center gap-8 sm:gap-10">
-          <div>
-            <h1 className="text-3xl font-semibold tracking-tight text-text-primary mb-4">
-              Christopher Schmidt
-            </h1>
-            <p className="text-sm text-text-muted mb-5">
-              VP, Solutions Engineering and AI - Enterprise AI, iLink Digital
-            </p>
-            <p className="text-lg text-text-secondary leading-relaxed max-w-[560px]">
-              I write on ontologies, knowledge graphs, and real-time
-              intelligence in Microsoft Fabric — the shift from historical
-              analytics to embedding data into business processes. I created
-              the{" "}
-              <Link href="/darf" className="text-accent hover:underline">
-                Data and AI Readiness Framework (DARF)
-              </Link>
-              , a two-pillar model for whether you can trust an AI
-              system&apos;s answer, and whether you can trust it to act on
-              that answer.
-            </p>
-          </div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/Self-Portrait.png"
-            alt="Christopher Schmidt"
-            width={144}
-            height={144}
-            className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border border-border-default shadow-md shadow-black/5 shrink-0"
-          />
-        </div>
-      </section>
-
-      {/* DARF */}
-      <section className="pt-12 pb-16 border-b border-border-default">
-        <h2 className="text-xs font-semibold tracking-widest text-text-muted uppercase mb-4">
-          Framework
-        </h2>
-        <Link
-          href="/darf"
-          className="group block rounded-xl border border-border-default p-6 sm:p-8 shadow-sm hover:shadow-md hover:border-accent/40 transition-all"
-        >
-          <p className="text-text-secondary leading-relaxed mb-4 max-w-[560px]">
-            <strong className="text-text-primary">
-              The Data and AI Readiness Framework (DARF)
-            </strong>{" "}
-            — Semantic Readiness and Operational Readiness, eight layers, a
-            scored maturity rubric. This is the canonical, current version of
-            the framework.
-          </p>
-          <span className="text-sm text-accent group-hover:underline">
-            Explore DARF →
-          </span>
-        </Link>
-      </section>
-
-      {/* Recent writing */}
-      <section className="pt-12 pb-16 border-b border-border-default">
-        <h2 className="text-xs font-semibold tracking-widest text-text-muted uppercase mb-8">
-          Recent Writing
-        </h2>
-        <ul className="space-y-7">
-          {articles.map((article) => (
-            <li
-              key={article.slug}
-              className="grid grid-cols-[8rem_1fr] gap-6 sm:gap-8"
-            >
-              <span className="text-sm text-text-muted pt-px tabular-nums">
-                {formatDate(article.date)}
-              </span>
-              <div>
-                <a
-                  href={article.url || "https://realtimedispatch.substack.com/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text-primary hover:text-accent transition-colors font-medium leading-snug"
-                >
-                  {article.title}
-                </a>
-                {article.category && (
-                  <p className="mt-1">
-                    <span className="text-xs text-text-muted">
-                      {categoryLabel(article.category)}
-                    </span>
-                  </p>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
-        <div className="mt-10">
-          <a
-            href="https://realtimedispatch.substack.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-accent hover:underline"
-          >
-            All writing →
-          </a>
-        </div>
-      </section>
-
-      {/* Newsletter */}
-      <section className="pt-12 pb-24">
-        <h2 className="text-xs font-semibold tracking-widest text-text-muted uppercase mb-4">
-          Newsletter
-        </h2>
-        <div className="rounded-xl border border-border-default p-6 sm:p-8 shadow-sm">
-          <p className="text-text-secondary leading-relaxed mb-6 max-w-[480px]">
-            The Real Time Dispatch goes out weekly on Substack — covering
-            Eventhouse, Eventstream, KQL, and the shift from dashboards to
-            action systems.
-          </p>
-          <a
-            href="https://realtimedispatch.substack.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-5 py-2.5 bg-accent text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity"
-          >
-            Subscribe on Substack
-          </a>
-          <p className="mt-4 text-sm text-text-muted">
-            Also on{" "}
-            <a
-              href="https://www.linkedin.com/newsletters/the-real-time-dispatch-7368234962522755072/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              LinkedIn
-            </a>{" "}
-            as a shorter native excerpt.
-          </p>
-        </div>
-      </section>
-    </div>
-  );
+  const articles = getAllArticles().slice(0, 2);
+  return <>
+    <section className="hero"><div className="wrap"><div className="hero-grid"><div><span className="eyebrow">Enterprise platforms · Engineering · Data &amp; AI</span><h1>Building the enterprise platforms that turn data and AI into <em>operational capability.</em></h1><p className="intro">I lead engineering organizations, modernize production platforms, and scale enterprise adoption. My work connects architectural depth with organizational accountability and measurable business outcomes.</p><div className="actions"><Link href="/work" className="btn btn-primary">Explore my leadership work <Arrow /></Link><Link href="/darf" className="text-link">Explore DARF <Arrow /></Link></div></div><aside className="hero-brief" aria-label="Leadership perspective"><div className="brief-top"><span className="eyebrow">A leadership perspective</span><span className="monogram" aria-hidden="true">CS</span></div><h2>Improving operational efficiency.</h2><div className="brief-item"><span>Build</span><p>Enterprise capabilities with accountable ownership.</p></div><div className="brief-item"><span>Modernize</span><p>Production platforms that serve the business.</p></div><div className="brief-item"><span>Scale</span><p>Adoption and value, one use case at a time.</p></div></aside></div><div className="proof-row" role="group" aria-label="Selected leadership outcomes"><div className="proof"><div className="proof-number">~20×</div><p className="proof-title">Customer-adoption growth for RTI</p><p className="proof-context">Microsoft · United States and Canada · ~24 months</p></div><div className="proof"><div className="proof-number">25 <small>/ 200+</small></div><p className="proof-title">Direct reports / broader stakeholders</p><p className="proof-context">Microsoft · Enterprise supplier risk</p></div><div className="proof"><div className="proof-number">~90%</div><p className="proof-title">Reduction in operating costs</p><p className="proof-context">Precision eControl · Production SaaS</p></div></div></div></section>
+    <section className="section"><div className="wrap"><div className="section-heading"><div><span className="eyebrow">01 / Selected leadership work</span><h2>Enterprise outcomes.<br />Hands-on accountability.</h2></div><p>Selected work across enterprise adoption, organizational capability, and production platform ownership.</p></div><CaseGrid /><div className="section-tail"><p>Results are shown in their operating context. Each case distinguishes direct responsibility from cross-functional influence.</p><Link href="/work" className="text-link">View leadership work <Arrow /></Link></div></div></section>
+    <section className="section light"><div className="wrap"><div className="approach-grid"><div className="approach-copy"><span className="eyebrow">02 / How I lead</span><h2>One use case at a time.<br />A foundation built to last.</h2><p className="intro">I start with a consequential business decision and an accountable owner, then establish the meaning, data, integration, governance, auditability, observability, and operational controls that use requires.</p><Link href="/approach" className="text-link">Read my leadership approach <Arrow /></Link></div><ApproachSteps /></div><Foundations /></div></section>
+    <section className="section framework-home"><div className="wrap framework-grid"><div><span className="eyebrow">03 / An original framework</span><h2>Trustworthy answers.<br />Governed action.</h2><p className="intro">The Data and AI Readiness Framework separates two questions that deserve their own evidence. A reliable answer does not, by itself, establish authority to act.</p><p className="framework-caption">DARF · 53 capabilities · 8 layers · 2 distinct questions</p><div className="actions"><Link href="/darf" className="btn btn-primary">Explore the framework <Arrow /></Link><Link href="/darf/example" className="text-link">Try a worked decision <Arrow /></Link></div></div><div><DarfPillars /><p className="framework-warning">Assess the defined use and its evidence. Do not hide a mandatory failure inside an overall readiness score.</p></div></div></section>
+    <section className="section light"><div className="wrap"><div className="section-heading"><div><span className="eyebrow">04 / Writing &amp; speaking</span><h2>Ideas grounded in<br />operating reality.</h2></div><p>Business decisions first, with the architectural depth to explain what makes them possible.</p></div><div className="insights-grid"><div><div className="column-label">Selected writing</div>{articles.map((article) => <Link href={`/articles/${article.slug}`} className="writing-item" key={article.slug}><div className="article-meta">{article.category} / {article.date}</div><div className="article-title-row"><h3>{article.title}</h3><span aria-hidden="true">↗</span></div></Link>)}<Link href="/writing" className="text-link">Explore writing &amp; speaking <Arrow /></Link></div><div><div className="column-label">Selected appearances</div><div className="talk-item"><div className="talk-event">FabCon &amp; SQLCon 2026</div><h3>Implementation Patterns for Fabric Real Time Intelligence</h3><p className="talk-date">March 19, 2026</p></div><Link href="/speaking" className="text-link">Published speaking archive <Arrow /></Link></div></div></div></section>
+    <Closing />
+  </>;
 }

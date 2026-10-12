@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Writing",
+  description: "Published essays by Christopher Schmidt on enterprise data, operational intelligence, architecture, and AI readiness.",
+  alternates: { canonical: "/articles" },
 };
 
 export default function ArticlesPage() {

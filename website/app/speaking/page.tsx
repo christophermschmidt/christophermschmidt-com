@@ -3,6 +3,8 @@ import { formatDate } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: "Speaking",
+  description: "Published conference and user-group appearances by Christopher Schmidt.",
+  alternates: { canonical: "/speaking" },
 };
 
 interface Talk {
