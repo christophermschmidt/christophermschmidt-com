@@ -10,10 +10,13 @@ export const previewHeaders = `/*
 export function deploymentMode(environment = process.env) {
   const branch = environment.CF_PAGES_BRANCH?.trim();
   const productionBranch = environment.SITE_PRODUCTION_BRANCH?.trim() || "main";
+  const forceNoindex = ["1", "true", "yes"].includes(
+    environment.SITE_FORCE_NOINDEX?.trim().toLowerCase() || "",
+  );
   const isCloudflarePages = environment.CF_PAGES === "1" || Boolean(branch);
-  return isCloudflarePages && branch && branch !== productionBranch
-    ? { kind: "preview", branch, productionBranch }
-    : { kind: "production", branch: branch || null, productionBranch };
+  return forceNoindex || (isCloudflarePages && branch && branch !== productionBranch)
+    ? { kind: "preview", branch: branch || null, productionBranch, forced: forceNoindex }
+    : { kind: "production", branch: branch || null, productionBranch, forced: false };
 }
 
 /**
@@ -44,7 +47,7 @@ if (process.argv[1] && pathToFileURL(path.resolve(process.argv[1])).href === imp
   const result = writeDeploymentHeaders(process.env, process.argv[2]);
   console.log(
     result.kind === "preview"
-      ? `Preview indexing disabled for branch ${result.branch}.`
+      ? `Preview indexing disabled for ${result.branch ? `branch ${result.branch}` : "this deployment"}.`
       : `Production indexing preserved for ${result.branch || "a non-Cloudflare local build"}.`,
   );
 }

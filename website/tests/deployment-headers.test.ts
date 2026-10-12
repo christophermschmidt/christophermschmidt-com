@@ -34,6 +34,20 @@ test("the production branch remains indexable and removes stale preview headers"
   assert.equal(fs.existsSync(path.join(output, "_headers")), false);
 });
 
+test("an isolated review project's primary branch can be forced nonindexable", () => {
+  const output = temporaryOutput();
+  const result = writeDeploymentHeaders({
+    CF_PAGES: "1",
+    CF_PAGES_BRANCH: "codex/executive-redesign-20261012",
+    SITE_PRODUCTION_BRANCH: "codex/executive-redesign-20261012",
+    SITE_FORCE_NOINDEX: "1",
+    DEPLOYMENT_OUTPUT_DIR: output,
+  });
+  assert.equal(result.kind, "preview");
+  assert.equal(result.forced, true);
+  assert.equal(fs.readFileSync(path.join(output, "_headers"), "utf8"), previewHeaders);
+});
+
 test("ordinary local builds remain indexable", () => {
   const output = temporaryOutput();
   const result = writeDeploymentHeaders({ DEPLOYMENT_OUTPUT_DIR: output });
