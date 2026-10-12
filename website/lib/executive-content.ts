@@ -73,7 +73,7 @@ export const leadershipCases: LeadershipCase[] = [
     introduction:
       "The mandate was broad: improve supplier risk. I began by diagnosing the operating problem, the decisions people needed to make, and how long it took to obtain a verified, trusted answer.",
     facts: [
-      { value: "~90 days", label: "Supplied current-state reporting cycle" },
+      { value: "~90 days", label: "Current-state reporting cycle" },
       { value: "25", label: "Direct reports" },
       { value: "200+", label: "Engineering, architecture, and business stakeholders" },
     ],
@@ -111,20 +111,18 @@ export const leadershipCases: LeadershipCase[] = [
         title: "Connect data quality to operational correction",
         paragraphs: [
           "I created a data-quality dashboard that did more than identify issues. Data-quality findings were connected to recommended upstream corrections for operational users, linking analytical visibility to the people positioned to improve the source process.",
-          "The recommendations were not described as automatic remediation, and this account does not establish a closed-loop verification process.",
+          "The dashboard connected findings with recommended corrections for operational users; it did not automatically execute those corrections.",
         ],
       },
       {
         title: "Bring the decision forward",
         paragraphs: [
-          "Onboarding inputs could be used to classify prospective suppliers and identify riskier ones before they entered Microsoft’s system. That earlier decision support is the supported outcome. It is distinct from a measured reduction in report-generation time.",
+          "Onboarding inputs could be used to classify prospective suppliers and identify riskier ones before they entered Microsoft's system. The outcome was earlier decision support during onboarding, rather than a claim about a specific report-generation turnaround.",
         ],
       },
     ],
     lesson:
       "Start with the decision the business needs to make. Establish what the evidence can support, expose what remains unknown, and organize the operational and analytical changes needed to improve that decision.",
-    measurementLimitations:
-      "The approximately 90-day figure is a supplied baseline. No measured post-implementation reporting turnaround, classification accuracy, exposure reduction, supplier count, or avoided-loss figure has been supplied.",
   },
   {
     slug: "econtrol",
