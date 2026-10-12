@@ -5,16 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/write-deployment-headers.mjs",
     "start": "next start",
     "lint": "tsc --noEmit",
     "test": "node --test tests/*.test.ts",
-    "pages:build": "npx @cloudflare/next-on-pages",
+    "pages:build": "npx @cloudflare/next-on-pages && node scripts/write-deployment-headers.mjs .vercel/output/static",
     "preview": "npx wrangler pages dev .vercel/output/static",
     "deploy": "npx wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "15.5.2",
+    "next": "15.5.27",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "remark": "^15.0.1",
