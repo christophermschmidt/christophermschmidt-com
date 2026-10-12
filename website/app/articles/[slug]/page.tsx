@@ -16,7 +16,16 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = await getArticleBySlug(slug);
   if (!article) return {};
-  return { title: article.title };
+  const url = `/articles/${article.slug}`;
+  return {
+    title: article.title,
+    alternates: { canonical: url },
+    openGraph: {
+      title: article.title,
+      type: "article",
+      url: `https://christophermschmidt.com${url}`,
+    },
+  };
 }
 
 export default async function ArticlePage({
