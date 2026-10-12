@@ -81,6 +81,7 @@ h3 { font-size: 1.75rem; }
 .proof + .proof { border-left: 1px solid var(--line); padding-left: 2.3rem; }
 .proof-number { font: 2.6rem/1.15 var(--serif); letter-spacing: -.04em; }
 .proof-number small { font-size: 1.75rem; }
+.proof-outcome { font: 1.35rem/1.3 var(--serif); letter-spacing: -.02em; max-width: 20rem; }
 .proof-title { font-size: .8rem; margin-top: .5rem; }
 .proof-context { color: #aeb6b4; font-size: .7rem; margin-top: .3rem; }
 
