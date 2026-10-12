@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { getAllArticles } from "@/lib/articles";
+import { getAllArticles, getArticleHref, isExternalArticleUrl } from "@/lib/articles";
 import { formatDate, categoryLabel } from "@/lib/format";
 import type { Metadata } from "next";
 
@@ -27,12 +26,14 @@ export default function ArticlesPage() {
               {formatDate(article.date)}
             </span>
             <div>
-              <Link
-                href={`/articles/${article.slug}`}
+              <a
+                href={getArticleHref(article)}
+                target={isExternalArticleUrl(article.url) ? "_blank" : undefined}
+                rel={isExternalArticleUrl(article.url) ? "noopener noreferrer" : undefined}
                 className="text-text-primary hover:text-accent transition-colors font-medium leading-snug"
               >
                 {article.title}
-              </Link>
+              </a>
               {article.category && (
                 <p className="mt-1.5">
                   <span className="text-xs text-text-muted">
