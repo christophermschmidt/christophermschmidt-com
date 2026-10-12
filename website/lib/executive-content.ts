@@ -29,11 +29,11 @@ export const leadershipCases: LeadershipCase[] = [
     cardTitle: "Scaling a capability into enterprise adoption.",
     summary:
       "Aligning product, engineering, sales, partners, and enablement around enterprise adoption in the United States and Canada.",
-    metric: "~5 to ~100 customers in ~24 months",
+    metric: "Approximately 20× customer growth over ~24 months",
     introduction:
       "A cross-functional leadership effort connecting a technical capability with enterprise adoption and associated commercial outcomes.",
     facts: [
-      { value: "~5 → ~100", label: "Customers adopting Real-Time Intelligence" },
+      { value: "~20×", label: "Customer-adoption growth for Real-Time Intelligence" },
       { value: "< $1M → ~$15M", label: "Associated revenue, not directly owned revenue" },
       { value: "~24 months", label: "United States and Canadian adoption program" },
     ],
@@ -52,7 +52,7 @@ export const leadershipCases: LeadershipCase[] = [
       {
         title: "The outcome",
         paragraphs: [
-          "Over approximately 24 months, adoption grew from roughly five to roughly 100 customers. Associated revenue grew from under $1 million to approximately $15 million.",
+          "Over approximately 24 months, customer adoption grew approximately 20×. Associated revenue grew from under $1 million to approximately $15 million.",
           "These are program-associated outcomes. They do not imply that I directly owned all of that revenue or a corresponding profit-and-loss statement.",
         ],
       },
