@@ -9,7 +9,7 @@ export const previewHeaders = `/*
 /** @param {Record<string, string | undefined>} environment */
 export function deploymentMode(environment = process.env) {
   const branch = environment.CF_PAGES_BRANCH?.trim();
-  const productionBranch = environment.SITE_PRODUCTION_BRANCH?.trim() || "main";
+  const productionBranch = environment.SITE_PRODUCTION_BRANCH?.trim() || "master";
   const forceNoindex = ["1", "true", "yes"].includes(
     environment.SITE_FORCE_NOINDEX?.trim().toLowerCase() || "",
   );

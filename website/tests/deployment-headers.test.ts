@@ -26,8 +26,7 @@ test("the production branch remains indexable and removes stale preview headers"
   fs.writeFileSync(path.join(output, "_headers"), previewHeaders, "utf8");
   const result = writeDeploymentHeaders({
     CF_PAGES: "1",
-    CF_PAGES_BRANCH: "main",
-    SITE_PRODUCTION_BRANCH: "main",
+    CF_PAGES_BRANCH: "master",
     DEPLOYMENT_OUTPUT_DIR: output,
   });
   assert.equal(result.kind, "production");
