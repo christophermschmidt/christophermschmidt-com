@@ -204,6 +204,7 @@ h3 { font-size: 1.75rem; }
 .test-state.pass { background: #dfeadf; border-color: #3d7141; color: #2f5d32; }
 .reset-button { border: 1px solid #778076; background: transparent; color: var(--ink); padding: .7rem 1rem; }
 .decision-panel { background: var(--ink); color: var(--paper); padding: 1.7rem; position: sticky; top: 7rem; }
+.light .decision-panel .eyebrow { color: var(--bronze); }
 .decision-panel h2 { font-size: 1.9rem; margin: 1rem 0; }
 .decision-panel h3 { font: 750 .7rem/1.4 var(--sans); letter-spacing: .1em; text-transform: uppercase; margin-top: 1.5rem; }
 .decision-panel p, .decision-panel li { color: #c2cbc5; font-size: .82rem; line-height: 1.75; }
