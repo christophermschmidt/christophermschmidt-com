@@ -10,10 +10,11 @@ import {
 
 test("published Substack posts lead the writing index and link to the original source", () => {
   const articles = getAllArticles();
-  assert.equal(articles[0].date, "2026-10-08");
-  assert.equal(articles[0].title, "Stop Rushing to Ask an Agent What Was True of the World Yesterday");
-  assert.equal(getArticleHref(articles[0]), "https://realtimedispatch.substack.com/p/stop-rushing-to-ask-an-agent-what");
+  assert.equal(articles[0].date, "2026-10-15");
+  assert.equal(articles[0].title, "Did Claude Just Kill Data Warehouses?");
+  assert.equal(getArticleHref(articles[0]), "https://realtimedispatch.substack.com/p/did-claude-just-kill-data-warehouses");
   assert.equal(isExternalArticleUrl(articles[0].url), true);
+  assert.ok(articles.some((article) => article.date === "2026-10-08"));
   assert.ok(articles.some((article) => article.date === "2026-09-03"));
   assert.ok(articles.some((article) => article.date === "2026-08-27"));
 });
