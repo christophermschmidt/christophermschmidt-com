@@ -1,5 +1,13 @@
 [
   {
+    "slug": "2026-10-15-did-claude-just-kill-data-warehouses",
+    "title": "Did Claude Just Kill Data Warehouses?",
+    "date": "2026-10-15",
+    "category": "architecture-strategy",
+    "url": "https://realtimedispatch.substack.com/p/did-claude-just-kill-data-warehouses",
+    "excerpt": "Anthropic&#8217;s October 8 Claude Dashboards announcement lets a user ask a question about connected company data and have Claude build the dashboard."
+  },
+  {
     "slug": "2026-10-08-stop-rushing-to-ask-an-agent-what",
     "title": "Stop Rushing to Ask an Agent What Was True of the World Yesterday",
     "date": "2026-10-08",
